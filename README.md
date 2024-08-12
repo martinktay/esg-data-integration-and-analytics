@@ -1,5 +1,5 @@
 # ESG Data Integration and Analytics Platform
-Overview
+## Overview
 This project is designed to provide an integrated view of Environmental, Social, and Governance (ESG) scores for companies listed in the S&P 500. The platform enables users to explore ESG performance metrics across various sectors and companies, offering visual insights and detailed analysis based on the processed data.
 
 Features
