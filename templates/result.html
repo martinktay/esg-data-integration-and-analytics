@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ESG and CDP Score Results</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css">
+</head>
+<body>
+    <section class="section">
+        <div class="container">
+            <h1 class="title">ESG and CDP Score Results for {{ cdp_data['company_name'] }}</h1>
+            <h2 class="subtitle">Ticker: {{ ticker }}</h2>
+
+            <div class="box">
+                <h3 class="title is-4">ESG Scores</h3>
+                <ul>
+                    <li><strong>ESG Score:</strong> {{ esg_data[0] if esg_data[0] is not none else "Data not available" }}</li>
+                    <li><strong>Environment Score:</strong> {{ esg_data[1] if esg_data[1] is not none else "Data not available" }}</li>
+                    <li><strong>Social Score:</strong> {{ esg_data[2] if esg_data[2] is not none else "Data not available" }}</li>
+                    <li><strong>Governance Score:</strong> {{ esg_data[3] if esg_data[3] is not none else "Data not available" }}</li>
+                    <li><strong>Controversy Level:</strong> {{ esg_data[4] if esg_data[4] is not none else "Data not available" }}</li>
+                    <li><strong>Sustainability Score:</strong> {{ esg_data[5] if esg_data[5] is not none else "Data not available" }}</li>
+                </ul>
+            </div>
+
+            <div class="box">
+                <h3 class="title is-4">CDP Score</h3>
+                <ul>
+                    <li><strong>CDP Score:</strong> {{ cdp_data['cdp_score'] if cdp_data['cdp_score'] is not none else "Data not available" }}</li>
+                </ul>
+            </div>
+
+            <a class="button is-primary" href="/">Go Back</a>
+        </div>
+    </section>
+</body>
+</html>
