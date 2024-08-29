@@ -2,11 +2,11 @@ import pandas as pd
 from flask import Flask, render_template, request
 import os
 
-# Load the datasets
+# Loading the datasets
 sp500_dataset_path = 'sp500_companies.csv'
 scores_dataset_path = 'scores.csv'
 
-# Load the datasets and check their columns
+# Loading both datasets and checking their columns
 sp500_df = pd.read_csv(sp500_dataset_path)
 scores_df = pd.read_csv(scores_dataset_path)
 
@@ -48,7 +48,7 @@ def scrape():
 
     # Check if the ticker exists in the dataset
     if company_data.empty:
-        return f"Error: No data available for ticker {ticker}. Please check the ticker symbol and try again."
+        return f"Error: No data is available for ticker {ticker}. Please check the ticker symbol and try again."
 
     # Extract the relevant data using the correct column names
     company_name = company_data.iloc[0]['Company_x']  # Use Company_x or Company_y depending on which one you want
